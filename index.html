@@ -1,27 +1,362 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agentlyfe — Universal Lead Generation System</title>
-    <meta name="description" content="One-command lead-gen system that works for any offer.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        :root{--bg:#0a0a0b;--bg-card:#111113;--border:#27272a;--text:#fafafa;--text-muted:#a1a1aa;--accent:#22d3ee;--accent2:#a78bfa;--accent3:#34d399;--gradient:linear-gradient(135deg,#22d3ee,#a78bfa)}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}code,pre{font-family:'JetBrains Mono',monospace}nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(10,10,11,.8);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 2rem}.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}.nav-logo{font-size:1.25rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.nav-links{display:flex;gap:2rem}.nav-links a{color:var(--text-muted);font-size:.9rem;font-weight:500}.nav-links a:hover{color:var(--text);text-decoration:none}.nav-cta{background:var(--gradient);color:#000;font-weight:600;padding:.5rem 1.25rem;border-radius:8px;font-size:.875rem}.nav-cta:hover{opacity:.9;text-decoration:none}.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:8rem 2rem 4rem;position:relative}.hero::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:800px;height:600px;background:radial-gradient(ellipse,rgba(34,211,238,.08) 0%,rgba(167,139,250,.04) 40%,transparent 70%);pointer-events:none}.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(34,211,238,.1);border:1px solid rgba(34,211,238,.2);padding:.4rem 1rem;border-radius:99px;font-size:.8rem;color:var(--accent);margin-bottom:1.5rem}.hero-badge .dot{width:6px;height:6px;background:var(--accent3);border-radius:50%;animation:pulse 2s infinite}@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}.hero h1{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:800;line-height:1.1;margin-bottom:1.5rem;max-width:800px}.hero h1 span{background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.hero p{font-size:1.2rem;color:var(--text-muted);max-width:600px;margin:0 auto 2.5rem}.hero-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}.btn-primary{background:var(--gradient);color:#000;font-weight:600;padding:.85rem 2rem;border-radius:10px;font-size:1rem;display:inline-flex;align-items:center;gap:.5rem;transition:transform .2s,box-shadow .2s}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(34,211,238,.25);text-decoration:none}.btn-secondary{background:var(--bg-card);border:1px solid var(--border);color:var(--text);font-weight:500;padding:.85rem 2rem;border-radius:10px;font-size:1rem;transition:border-color .2s}.btn-secondary:hover{border-color:var(--accent);text-decoration:none}.terminal{max-width:700px;margin:3rem auto 0;text-align:left;background:#0d0d0f;border:1px solid var(--border);border-radius:12px;overflow:hidden}.terminal-bar{display:flex;gap:6px;padding:12px 16px;border-bottom:1px solid var(--border)}.terminal-bar span{width:12px;height:12px;border-radius:50%}.terminal-bar span:nth-child(1){background:#ef4444}.terminal-bar span:nth-child(2){background:#eab308}.terminal-bar span:nth-child(3){background:#22c55e}.terminal pre{padding:1.25rem 1.5rem;font-size:.85rem;color:var(--accent3);overflow-x:auto;line-height:1.8}.terminal .comment{color:#52525b}.terminal .cmd{color:var(--accent)}section{padding:6rem 2rem;max-width:1200px;margin:0 auto}.section-label{font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:.75rem}.section-title{font-size:clamp(1.75rem,4vw,2.75rem);font-weight:700;margin-bottom:1rem;line-height:1.2}.section-desc{font-size:1.1rem;color:var(--text-muted);max-width:600px;margin-bottom:3rem}.flow{display:grid;gap:0;max-width:800px;margin:0 auto}.flow-step{display:grid;grid-template-columns:60px 1fr;gap:1.5rem;padding:2rem 0;position:relative}.flow-step:not(:last-child)::after{content:'';position:absolute;left:29px;top:60px;bottom:0;width:2px;background:var(--border)}.flow-num{width:60px;height:60px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.25rem;background:var(--bg-card);border:1px solid var(--border);position:relative;z-index:1}.flow-step:nth-child(1) .flow-num{color:var(--accent);border-color:rgba(34,211,238,.3)}.flow-step:nth-child(2) .flow-num{color:var(--accent2);border-color:rgba(167,139,250,.3)}.flow-step:nth-child(3) .flow-num{color:var(--accent3);border-color:rgba(52,211,153,.3)}.flow-content h3{font-size:1.25rem;font-weight:600;margin-bottom:.5rem}.flow-content p{color:var(--text-muted);font-size:.95rem}.flow-content code{background:rgba(34,211,238,.1);padding:.15rem .5rem;border-radius:4px;font-size:.85rem;color:var(--accent)}.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem}.feature-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:2rem;transition:border-color .3s,transform .2s}.feature-card:hover{border-color:var(--accent);transform:translateY(-4px)}.feature-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1.25rem}.feature-card h3{font-size:1.1rem;font-weight:600;margin-bottom:.5rem}.feature-card p{color:var(--text-muted);font-size:.9rem}.api-table{width:100%;border-collapse:collapse;background:var(--bg-card);border-radius:16px;overflow:hidden;border:1px solid var(--border)}.api-table th{text-align:left;padding:1rem 1.5rem;background:rgba(34,211,238,.05);font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;color:var(--text-muted);border-bottom:1px solid var(--border)}.api-table td{padding:1rem 1.5rem;border-bottom:1px solid var(--border);font-size:.9rem}.api-table tr:last-child td{border-bottom:none}.api-table .cost-free{color:var(--accent3);font-weight:500}.api-table .cost-cheap{color:var(--accent);font-weight:500}.cta-section{text-align:center;padding:6rem 2rem;position:relative}.cta-section::before{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:600px;height:400px;background:radial-gradient(ellipse,rgba(167,139,250,.08) 0%,transparent 70%);pointer-events:none}.cta-section h2{font-size:clamp(2rem,4vw,3rem);font-weight:700;margin-bottom:1rem}.cta-section p{color:var(--text-muted);font-size:1.1rem;max-width:500px;margin:0 auto 2rem}footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;color:var(--text-muted);font-size:.85rem}footer a{color:var(--text-muted)}footer a:hover{color:var(--text)}@media(max-width:768px){.nav-links{display:none}.features-grid{grid-template-columns:1fr}.api-table{font-size:.8rem}.api-table th,.api-table td{padding:.75rem 1rem}}
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agentlyfe — Gerador de Leads Inteligente</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0b;--surface:#111113;--surface2:#1a1a1f;--border:#2a2a30;--text:#e4e4e7;--text2:#a1a1aa;--accent:#22d3ee;--accent2:#a78bfa;--accent3:#34d399;--danger:#f87171;--warning:#fbbf24}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+a{color:var(--accent);text-decoration:none}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,11,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 2rem;height:60px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;font-size:1.3rem;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.nav-links{display:flex;gap:1.5rem;align-items:center}
+.nav-links a{color:var(--text2);font-size:.9rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.btn-github{background:var(--accent);color:#000;padding:.45rem 1rem;border-radius:8px;font-weight:600;font-size:.85rem;transition:opacity .2s}
+.btn-github:hover{opacity:.85}
+
+/* HERO */
+.hero{padding:8rem 2rem 3rem;text-align:center;max-width:800px;margin:0 auto}
+.badge{display:inline-block;background:rgba(34,211,238,.1);border:1px solid rgba(34,211,238,.25);color:var(--accent);padding:.35rem 1rem;border-radius:50px;font-size:.8rem;font-weight:500;margin-bottom:1.5rem}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;line-height:1.15;margin-bottom:1rem}
+.hero h1 span{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{color:var(--text2);font-size:1.1rem;max-width:550px;margin:0 auto 2rem}
+
+/* SEARCH FORM */
+.search-section{max-width:900px;margin:0 auto;padding:0 2rem 4rem}
+.search-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:2rem;position:relative;overflow:hidden}
+.search-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2),var(--accent3))}
+.search-card h2{font-size:1.3rem;font-weight:700;margin-bottom:.5rem}
+.search-card .subtitle{color:var(--text2);font-size:.9rem;margin-bottom:1.5rem}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.form-group{display:flex;flex-direction:column;gap:.4rem}
+.form-group.full{grid-column:1/-1}
+.form-group label{font-size:.85rem;font-weight:600;color:var(--text2)}
+.form-group input,.form-group select,.form-group textarea{background:var(--surface2);border:1px solid var(--border);color:var(--text);padding:.7rem 1rem;border-radius:10px;font-size:.95rem;font-family:'Inter',sans-serif;transition:border-color .2s;outline:none}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--accent)}
+.form-group input::placeholder,.form-group textarea::placeholder{color:#555}
+.form-group select option{background:var(--surface2);color:var(--text)}
+.form-actions{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+.btn-search{background:linear-gradient(135deg,var(--accent),#06b6d4);color:#000;border:none;padding:.75rem 2rem;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;transition:transform .15s,box-shadow .15s;font-family:'Inter',sans-serif;display:flex;align-items:center;gap:.5rem}
+.btn-search:hover{transform:translateY(-1px);box-shadow:0 8px 30px rgba(34,211,238,.25)}
+.btn-search:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}
+.btn-export{background:var(--surface2);color:var(--text);border:1px solid var(--border);padding:.75rem 1.5rem;border-radius:10px;font-size:.9rem;font-weight:600;cursor:pointer;transition:border-color .2s;font-family:'Inter',sans-serif;display:none;align-items:center;gap:.5rem}
+.btn-export:hover{border-color:var(--accent)}
+.search-status{color:var(--text2);font-size:.85rem;margin-top:.5rem;min-height:1.2rem}
+
+/* RESULTS */
+.results-section{max-width:900px;margin:0 auto;padding:0 2rem 4rem;display:none}
+.results-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem}
+.results-header h3{font-size:1.1rem;font-weight:700}
+.results-count{color:var(--text2);font-size:.85rem}
+.lead-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.25rem;margin-bottom:.75rem;transition:border-color .2s}
+.lead-card:hover{border-color:var(--accent)}
+.lead-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.5rem}
+.lead-name{font-weight:700;font-size:1.05rem}
+.lead-score{display:inline-flex;align-items:center;gap:.3rem;padding:.2rem .7rem;border-radius:50px;font-size:.75rem;font-weight:700}
+.score-hot{background:rgba(34,211,153,.15);color:var(--accent3)}
+.score-warm{background:rgba(251,191,36,.15);color:var(--warning)}
+.score-cold{background:rgba(248,113,113,.15);color:var(--danger)}
+.lead-details{display:grid;grid-template-columns:1fr 1fr;gap:.3rem .5rem;margin-bottom:.5rem}
+.lead-detail{font-size:.85rem;color:var(--text2);display:flex;align-items:center;gap:.4rem}
+.lead-detail svg{width:14px;height:14px;flex-shrink:0}
+.lead-detail.full{grid-column:1/-1}
+.lead-tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.4rem}
+.lead-tag{background:var(--surface2);color:var(--text2);padding:.15rem .6rem;border-radius:50px;font-size:.75rem}
+
+/* LOADING */
+.loading-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,10,11,.7);backdrop-filter:blur(5px);z-index:200;align-items:center;justify-content:center}
+.loading-overlay.active{display:flex}
+.loading-box{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:2.5rem;text-align:center;max-width:400px}
+.spinner{width:48px;height:48px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 1rem}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading-box h3{font-weight:700;margin-bottom:.5rem}
+.loading-box p{color:var(--text2);font-size:.9rem}
+.loading-steps{margin-top:1rem;text-align:left}
+.loading-step{display:flex;align-items:center;gap:.5rem;padding:.35rem 0;font-size:.85rem;color:var(--text2)}
+.loading-step.done{color:var(--accent3)}
+.loading-step.active{color:var(--accent)}
+.loading-step svg{width:16px;height:16px}
+
+/* HOW IT WORKS */
+.how-section{max-width:900px;margin:0 auto;padding:3rem 2rem;border-top:1px solid var(--border)}
+.how-section h2{text-align:center;font-size:1.5rem;font-weight:700;margin-bottom:2rem}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.step{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;text-align:center}
+.step-num{width:36px;height:36px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.9rem;margin:0 auto .75rem}
+.step h3{font-size:.95rem;font-weight:700;margin-bottom:.4rem}
+.step p{color:var(--text2);font-size:.85rem}
+
+/* FOOTER */
+footer{text-align:center;padding:2rem;border-top:1px solid var(--border);color:var(--text2);font-size:.8rem}
+footer a{color:var(--accent)}
+
+/* RESPONSIVE */
+@media(max-width:640px){
+  .form-grid{grid-template-columns:1fr}
+  .lead-details{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .nav-links a:not(.btn-github){display:none}
+}
+</style>
 </head>
 <body>
-<nav><div class="nav-inner"><a href="#" class="nav-logo">Agentlyfe</a><div class="nav-links"><a href="#how-it-works">How it works</a><a href="#features">Features</a><a href="#api-keys">Setup</a></div><a href="https://github.com/natuarqbr-creator/agentlyfe" class="nav-cta">View on GitHub</a></div></nav>
-<section class="hero"><div><div class="hero-badge"><span class="dot"></span>Open Source &middot; MIT License</div><h1>Lead generation for <span>any offer</span>, automated</h1><p>Tell it what you sell, pick a country. Agentlyfe designs your pipeline, scrapes Google Places, scores every lead, and exports to CSV or Notion.</p><div class="hero-actions"><a href="https://github.com/natuarqbr-creator/agentlyfe" class="btn-primary"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.39.6.11.82-.26.82-.58v-2.23c-3.34.73-4.04-1.41-4.04-1.41-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.08-.73.08-.73 1.2.08 1.84 1.23 1.84 1.23 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 016.02 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.82.58A12.01 12.01 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>Get Started</a><a href="#how-it-works" class="btn-secondary">See how it works</a></div><div class="terminal"><div class="terminal-bar"><span></span><span></span><span></span></div><pre><span class="comment"># One-line install</span>
-<span class="cmd">curl -sSL https://raw.githubusercontent.com/natuarqbr-creator/agentlyfe/main/install.sh | bash</span>
 
-<span class="comment"># Or try it in test mode first (zero residue)</span>
-<span class="cmd">bash &lt;(curl -sSL https://raw.githubusercontent.com/natuarqbr-creator/agentlyfe/main/install.sh) --test</span></pre></div></div></section>
-<section id="how-it-works"><p class="section-label">How it works</p><h2 class="section-title">Three steps. One command.</h2><p class="section-desc">From describing your offer to receiving scored, prioritized leads in your inbox.</p><div class="flow"><div class="flow-step"><div class="flow-num">1</div><div class="flow-content"><h3>Describe your offer</h3><p>Tell it what you sell and where. For example: <code>"I sell luxury saunas to hotels in Spain"</code>. Claude AI designs your verticals, cities, keywords, pitch angle, and scoring rubric automatically.</p></div></div><div class="flow-step"><div class="flow-num">2</div><div class="flow-content"><h3>Scrape &amp; score</h3><p>The scraper hits Google Places for each city. For every business found, it checks the website, analyzes Google Places types, and scores against your custom rubric into <code>A+</code>, <code>A</code>, <code>B</code>, or <code>C</code> tiers.</p></div></div><div class="flow-step"><div class="flow-num">3</div><div class="flow-content"><h3>Export &amp; outreach</h3><p>Priority leads are exported to CSV, synced to Notion CRM, and cold emails are auto-generated with your pitch angle. Control everything via Telegram bot or CLI.</p></div></div></div></section>
-<section id="features"><p class="section-label">Features</p><h2 class="section-title">Everything you need, nothing you don't</h2><p class="section-desc">Built for speed. Every script is self-contained and independently usable.</p><div class="features-grid"><div class="feature-card"><div class="feature-icon" style="background:rgba(34,211,238,.1)">&#127760;</div><h3>Universal scraper</h3><p>Works for any country, any vertical. Google Places API with intelligent keyword generation in local languages.</p></div><div class="feature-card"><div class="feature-icon" style="background:rgba(167,139,250,.1)">&#129504;</div><h3>AI-powered scoring</h3><p>Claude designs a custom scoring rubric based on YOUR offer. Hot leads rise to the top automatically.</p></div><div class="feature-card"><div class="feature-icon" style="background:rgba(52,211,153,.1)">&#128233;</div><h3>Cold email generation</h3><p>Pitch-angle-aware emails generated per lead. Personalized, relevant, ready to send.</p></div><div class="feature-card"><div class="feature-icon" style="background:rgba(251,191,36,.1)">&#128196;</div><h3>Notion CRM sync</h3><p>Auto-sync scored leads to your Notion database. Track deals, outreach status, and follow-ups.</p></div><div class="feature-card"><div class="feature-icon" style="background:rgba(244,63,94,.1)">&#128241;</div><h3>Telegram bot</h3><p>Control your pipeline from your phone. Start scrapes, add leads, get briefings — all from Telegram.</p></div><div class="feature-card"><div class="feature-icon" style="background:rgba(34,211,238,.1)">&#9776;</div><h3>Daily briefings</h3><p>Morning AI briefings summarizing your pipeline state, new leads, and suggested next moves.</p></div></div></section>
-<section id="api-keys"><p class="section-label">Setup</p><h2 class="section-title">API keys you'll need</h2><p class="section-desc">The installer walks you through each one with exact URLs and step-by-step instructions.</p><table class="api-table"><thead><tr><th>Service</th><th>Purpose</th><th>Cost</th></tr></thead><tbody><tr><td><strong>Anthropic (Claude)</strong></td><td>Generates rubric, writes cold emails, daily briefings</td><td class="cost-cheap">$5 lasts months</td></tr><tr><td><strong>Google Places</strong></td><td>Finds the businesses you want to reach</td><td class="cost-free">$200 free/month</td></tr><tr><td><strong>Notion</strong></td><td>CRM for scraped leads (optional)</td><td class="cost-free">Free</td></tr><tr><td><strong>Telegram</strong></td><td>Mobile control via bot (optional)</td><td class="cost-free">Free</td></tr></tbody></table></section>
-<section class="cta-section"><h2>Ready to find your next customers?</h2><p>One command to install. Works for any offer, any country. Start generating leads in minutes.</p><a href="https://github.com/natuarqbr-creator/agentlyfe" class="btn-primary" style="font-size:1.1rem;padding:1rem 2.5rem">Get Agentlyfe on GitHub &rarr;</a></section>
-<footer><p>Built by <a href="https://www.youtube.com/@iliaslaguir">Ilias Laguir</a> &middot; <a href="https://github.com/natuarqbr-creator/agentlyfe">GitHub</a> &middot; MIT License</p></footer>
+<nav>
+  <div class="logo">Agentlyfe</div>
+  <div class="nav-links">
+    <a href="#how">Como funciona</a>
+    <a href="https://github.com/natuarqbr-creator/agentlyfe" class="btn-github" target="_blank">GitHub</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="badge">&#x26A1; Lead Generation com IA</div>
+  <h1>Encontre leads qualificados para <span>qualquer oferta</span></h1>
+  <p>Preencha sua oferta e regi&atilde;o. O Agentlyfe busca no Google Places, pontua cada lead com IA e entrega uma lista pronta para prospectar.</p>
+</section>
+
+<section class="search-section">
+  <div class="search-card">
+    <h2>&#x1F50D; Buscar Leads</h2>
+    <p class="subtitle">Descreva sua oferta e onde quer encontrar clientes</p>
+    <form id="searchForm">
+      <div class="form-grid">
+        <div class="form-group full">
+          <label>O que voc&ecirc; vende / sua oferta</label>
+          <input type="text" id="offer" placeholder="Ex: consultoria de marketing digital, reforma residencial, software para restaurantes..." required>
+        </div>
+        <div class="form-group">
+          <label>Cidade / Regi&atilde;o</label>
+          <input type="text" id="city" placeholder="Ex: Cascavel, PR" required>
+        </div>
+        <div class="form-group">
+          <label>Tipo de neg&oacute;cio alvo</label>
+          <input type="text" id="businessType" placeholder="Ex: restaurantes, cl&iacute;nicas, construtoras">
+        </div>
+        <div class="form-group">
+          <label>Raio de busca</label>
+          <select id="radius">
+            <option value="5000">5 km</option>
+            <option value="10000" selected>10 km</option>
+            <option value="20000">20 km</option>
+            <option value="50000">50 km</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>M&aacute;ximo de resultados</label>
+          <select id="maxResults">
+            <option value="10">10 leads</option>
+            <option value="20" selected>20 leads</option>
+            <option value="40">40 leads</option>
+            <option value="60">60 leads</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn-search" id="btnSearch">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          Buscar Leads
+        </button>
+        <button type="button" class="btn-export" id="btnExport" onclick="exportCSV()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Exportar CSV
+        </button>
+      </div>
+      <div class="search-status" id="searchStatus"></div>
+    </form>
+  </div>
+</section>
+
+<section class="results-section" id="resultsSection">
+  <div class="results-header">
+    <h3>&#x1F4CB; Leads Encontrados</h3>
+    <span class="results-count" id="resultsCount"></span>
+  </div>
+  <div id="resultsList"></div>
+</section>
+
+<!-- LOADING OVERLAY -->
+<div class="loading-overlay" id="loadingOverlay">
+  <div class="loading-box">
+    <div class="spinner"></div>
+    <h3>Buscando leads...</h3>
+    <p>Analisando neg&oacute;cios na regi&atilde;o</p>
+    <div class="loading-steps">
+      <div class="loading-step" id="step1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg> Buscando no Google Places...</div>
+      <div class="loading-step" id="step2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg> Coletando detalhes dos neg&oacute;cios...</div>
+      <div class="loading-step" id="step3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg> Pontuando leads com IA...</div>
+    </div>
+  </div>
+</div>
+
+<section class="how-section" id="how">
+  <h2>Como funciona</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h3>Descreva sua oferta</h3>
+      <p>Diga o que voc&ecirc; vende e em qual regi&atilde;o quer encontrar clientes</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h3>Busca autom&aacute;tica</h3>
+      <p>O Agentlyfe varre o Google Places e encontra neg&oacute;cios relevantes na &aacute;rea</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h3>Leads qualificados</h3>
+      <p>A IA pontua cada lead e voc&ecirc; exporta a lista pronta para prospectar</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Agentlyfe &mdash; Feito por <a href="https://github.com/natuarqbr-creator" target="_blank">natuarqbr-creator</a> &middot; Baseado no sistema de <a href="https://github.com/iliaslaguir/agentlyfe-system" target="_blank">Ilias Laguir</a></p>
+</footer>
+
+<script>
+let allLeads = [];
+
+document.getElementById('searchForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const offer = document.getElementById('offer').value.trim();
+  const city = document.getElementById('city').value.trim();
+  const businessType = document.getElementById('businessType').value.trim();
+  const radius = document.getElementById('radius').value;
+  const maxResults = parseInt(document.getElementById('maxResults').value);
+
+  if (!offer || !city) return;
+
+  const btn = document.getElementById('btnSearch');
+  btn.disabled = true;
+
+  const overlay = document.getElementById('loadingOverlay');
+  overlay.classList.add('active');
+
+  // Reset steps
+  ['step1','step2','step3'].forEach(s => {
+    document.getElementById(s).className = 'loading-step';
+  });
+  document.getElementById('step1').classList.add('active');
+
+  try {
+    const query = businessType ? `${businessType} em ${city}` : `${offer} em ${city}`;
+
+    setTimeout(() => {
+      document.getElementById('step1').classList.remove('active');
+      document.getElementById('step1').classList.add('done');
+      document.getElementById('step1').innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Google Places OK';
+      document.getElementById('step2').classList.add('active');
+    }, 1500);
+
+    const searchResp = await fetch('/api/search', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ query, city, radius: parseInt(radius), maxResults })
+    });
+
+    if (!searchResp.ok) {
+      const err = await searchResp.json();
+      throw new Error(err.error || 'Erro na busca');
+    }
+
+    const places = await searchResp.json();
+
+    document.getElementById('step1').classList.remove('active');
+    document.getElementById('step1').classList.add('done');
+    document.getElementById('step1').innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Google Places OK';
+    document.getElementById('step2').classList.remove('active');
+    document.getElementById('step2').classList.add('done');
+    document.getElementById('step2').innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> ' + places.results.length + ' negocios encontrados';
+    document.getElementById('step3').classList.add('active');
+
+    const scoreResp = await fetch('/api/score', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ offer, places: places.results })
+    });
+
+    if (!scoreResp.ok) {
+      const err = await scoreResp.json();
+      throw new Error(err.error || 'Erro no scoring');
+    }
+
+    const scored = await scoreResp.json();
+
+    document.getElementById('step3').classList.remove('active');
+    document.getElementById('step3').classList.add('done');
+    document.getElementById('step3').innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Leads pontuados!';
+
+    allLeads = scored.leads;
+    renderResults(allLeads);
+
+    setTimeout(() => overlay.classList.remove('active'), 600);
+
+  } catch (err) {
+    overlay.classList.remove('active');
+    document.getElementById('searchStatus').textContent = '❌ ' + err.message;
+    document.getElementById('searchStatus').style.color = 'var(--danger)';
+  } finally {
+    btn.disabled = false;
+  }
+});
+
+function renderResults(leads) {
+  const section = document.getElementById('resultsSection');
+  const list = document.getElementById('resultsList');
+  const count = document.getElementById('resultsCount');
+
+  section.style.display = 'block';
+  count.textContent = leads.length + ' leads encontrados';
+  document.getElementById('btnExport').style.display = 'flex';
+  document.getElementById('searchStatus').textContent = '✅ Busca concluida!';
+  document.getElementById('searchStatus').style.color = 'var(--accent3)';
+
+  list.innerHTML = leads.map(lead => {
+    const scoreClass = lead.score >= 80 ? 'score-hot' : lead.score >= 50 ? 'score-warm' : 'score-cold';
+    const scoreLabel = lead.score >= 80 ? '🔥 Hot Lead' : lead.score >= 50 ? '🟡 Warm' : '❄️ Cold';
+
+    return '<div class="lead-card">' +
+      '<div class="lead-top">' +
+        '<span class="lead-name">' + lead.name + '</span>' +
+        '<span class="lead-score ' + scoreClass + '">' + scoreLabel + ' · ' + lead.score + '/100</span>' +
+      '</div>' +
+      '<div class="lead-details">' +
+        (lead.address ? '<div class="lead-detail full"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> ' + lead.address + '</div>' : '') +
+        (lead.phone ? '<div class="lead-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> ' + lead.phone + '</div>' : '') +
+        (lead.rating ? '<div class="lead-detail"><svg viewBox="0 0 24 24" fill="var(--warning)" stroke="var(--warning)" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> ' + lead.rating + ' (' + (lead.totalRatings || '?') + ' avaliacoes)</div>' : '') +
+        (lead.website ? '<div class="lead-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg> <a href="' + lead.website + '" target="_blank">' + lead.website.replace(/^https?:\/\//, '').slice(0,40) + '</a></div>' : '') +
+      '</div>' +
+      (lead.reason ? '<div class="lead-tags"><div class="lead-tag">💡 ' + lead.reason + '</div></div>' : '') +
+      (lead.types && lead.types.length ? '<div class="lead-tags">' + lead.types.slice(0,3).map(function(t){return '<span class="lead-tag">' + t + '</span>';}).join('') + '</div>' : '') +
+    '</div>';
+  }).join('');
+
+  section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function exportCSV() {
+  if (!allLeads.length) return;
+  var headers = ['Nome','Endereco','Telefone','Rating','Avaliacoes','Website','Score','Motivo'];
+  var rows = allLeads.map(function(l){return [
+    l.name, l.address||'', l.phone||'', l.rating||'', l.totalRatings||'', l.website||'', l.score, l.reason||''
+  ];});
+  var csv = [headers].concat(rows).map(function(r){return r.map(function(c){return '"' + String(c).replace(/"/g,'""') + '"';}).join(',');}).join('\n');
+  var blob = new Blob(['\ufeff'+csv], {type:'text/csv;charset=utf-8;'});
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url; a.download = 'leads-agentlyfe.csv'; a.click();
+  URL.revokeObjectURL(url);
+}
+</script>
 </body>
 </html>
+
